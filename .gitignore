@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.egg-info/
+.build/
+build/
+dist/
+.venv/
+.env
+.env.*
+*.env
+
+# Streamlit
+.streamlit/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks / caches
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.cache/
+.coverage
+
+# Credentials
+service_account.json
