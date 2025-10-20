@@ -84,8 +84,7 @@ Built for **automation, scalability, and continuous learning**.
 ---
 
 ## 🧑‍💻 Author
-**Analytos.ai Team**  
-© 2025 Analytos.ai — Built with ❤️ and Streamlit
+**Bala Sai M**  
 
 ---
 
