@@ -1,32 +1,96 @@
-# LangGraph Prospect-to-Lead Workflow
 
-## Overview
-End-to-end LangGraph system that discovers, enriches, scores, and contacts B2B prospects and learns via a feedback loop.
+# 🚀 LangGraph Prospect-to-Lead Workflow
 
-## Setup
-- **Python**: 3.10+
-- **Install deps**:
-```bash
-pip install -r requirements.txt
-```
-- **Environment**:
-  - Copy `.env.example` to `.env` and fill keys. Set `MOCK_MODE=true` to run without external APIs.
-  - For Google Sheets, place your service account JSON at the path in `GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON`.
+## 🧩 Overview
+An **end-to-end LangGraph system** that discovers, enriches, scores, and contacts **B2B prospects**, continuously improving through a **feedback loop**.
 
-## Run
+---
+
+## ⚙️ Setup
+
+### 🐍 Requirements
+- **Python:** 3.10+  
+- **Install dependencies:**  
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+### 🌱 Environment Setup
+1. Copy `.env.example` → `.env`  
+2. Fill in required keys.  
+3. To run in mock mode (no external API calls):  
+   ```bash
+   MOCK_MODE=true
+   ```
+4. For **Google Sheets integration**, place your service account JSON at the path specified in:  
+   ```bash
+   GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON
+   ```
+
+---
+
+## ▶️ Run the Workflow
+
 ```bash
 python langgraph_builder.py --workflow workflow.json --persist ./state
 ```
 
-## Files
-- `workflow.json` single source of truth.
-- `langgraph_builder.py` reads, validates, builds, and executes LangGraph.
-- `agents/` modular sub-agents with structured I/O and logging.
+---
 
-## Extend/Modify
-- Add a new step in `workflow.json` with `id`, `agent`, `inputs`, `instructions`, `tools`, `output_schema`.
-- Implement a new agent class in `agents/` deriving from `BaseAgent` and register it in `AGENT_REGISTRY` in `agents/__init__.py`.
+## 📁 Project Structure
 
-## Notes
-- Mock mode returns deterministic demo data and skips external calls.
-- Real mode requires valid API keys and may incur API costs.
+| File/Folder | Description |
+|--------------|-------------|
+| **workflow.json** | Single source of truth for workflow steps and configuration. |
+| **langgraph_builder.py** | Reads, validates, builds, and executes LangGraph. |
+| **agents/** | Modular sub-agents with structured input/output and logging. |
+
+---
+
+## 🔧 Extend or Modify
+
+### ➕ Add a New Step
+Add a new entry in **workflow.json** with:  
+- `id`
+- `agent`
+- `inputs`
+- `instructions`
+- `tools`
+- `output_schema`
+
+### ⚙️ Add a New Agent
+1. Implement a new class in `agents/`, deriving from `BaseAgent`.  
+2. Register it in the `AGENT_REGISTRY` inside `agents/__init__.py`.
+
+---
+
+## 🧠 Notes
+- **Mock Mode** → Returns deterministic demo data, skipping all external calls.  
+- **Real Mode** → Requires valid API keys; may incur API costs.  
+
+---
+
+## 🌐 About
+LangGraph is designed to **streamline prospect discovery and engagement** using AI-driven workflows.  
+Built for **automation, scalability, and continuous learning**.
+
+---
+
+## 📘 Resources
+- 🧾 [Readme](README.md)
+- 🧩 [Workflow File](workflow.json)
+- 🧠 [Agents Module](agents/)
+
+---
+
+## 🧑‍💻 Author
+**Analytos.ai Team**  
+© 2025 Analytos.ai — Built with ❤️ and Streamlit
+
+---
+
+## 📊 Languages
+| Language | Usage |
+|-----------|--------|
+| 🐍 Python | 100% |
+
